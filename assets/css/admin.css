@@ -1,0 +1,527 @@
+/* =====================================================================
+   Shipping Per Product — Admin Styles
+   Hera Studio
+   ===================================================================== */
+
+:root {
+	--spp-bg:          #f0f0f4;
+	--spp-surface:     #ffffff;
+	--spp-border:      #e2e2ec;
+	--spp-primary:     #1a1a2e;
+	--spp-accent:      #e8b86d;
+	--spp-accent-hover:#d4a456;
+	--spp-text:        #1a1a2e;
+	--spp-muted:       #6b6b84;
+	--spp-danger:      #e05252;
+	--spp-danger-hover:#c43c3c;
+	--spp-success:     #3bb87d;
+	--spp-info-bg:     #f5f0e8;
+	--spp-info-border: #e8b86d;
+	--spp-radius:      10px;
+	--spp-shadow:      0 1px 4px rgba(26,26,46,.07), 0 4px 16px rgba(26,26,46,.06);
+	--spp-transition:  .18s ease;
+}
+
+/* ── Layout ── */
+.spp-wrap {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	color: var(--spp-text);
+	background: var(--spp-bg);
+	min-height: 100vh;
+	padding-bottom: 48px;
+}
+
+/* ── Header ── */
+.spp-header {
+	background: var(--spp-primary);
+	padding: 0 32px;
+	margin-left: -20px;
+	margin-right: 0;
+}
+
+.spp-header-inner {
+	max-width: 960px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 60px;
+}
+
+.spp-logo {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: -.01em;
+}
+
+.spp-logo svg {
+	flex-shrink: 0;
+}
+
+.spp-badge {
+	background: var(--spp-accent);
+	color: var(--spp-primary);
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: .06em;
+	text-transform: uppercase;
+	padding: 3px 10px;
+	border-radius: 20px;
+	text-decoration: none;
+	transition: background var(--spp-transition);
+}
+
+.spp-badge:hover {
+	background: var(--spp-accent-hover);
+	color: var(--spp-primary);
+}
+
+/* ── Body ── */
+.spp-body {
+	max-width: 960px;
+	margin: 32px auto 0;
+	padding: 0 32px;
+	display: grid;
+	gap: 24px;
+}
+
+/* ── Card ── */
+.spp-card {
+	background: var(--spp-surface);
+	border: 1px solid var(--spp-border);
+	border-radius: var(--spp-radius);
+	box-shadow: var(--spp-shadow);
+	overflow: hidden;
+}
+
+.spp-card-header {
+	padding: 24px 28px 0;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.spp-card-header h2 {
+	margin: 0;
+	font-size: 15px;
+	font-weight: 700;
+	color: var(--spp-text);
+	letter-spacing: -.01em;
+}
+
+.spp-card-desc {
+	margin: 6px 0 0;
+	color: var(--spp-muted);
+	font-size: 13px;
+	line-height: 1.5;
+	padding: 0 28px 20px;
+}
+
+.spp-count {
+	font-size: 12px;
+	color: var(--spp-muted);
+	font-weight: 500;
+}
+
+/* ── Form ── */
+.spp-form {
+	padding: 4px 28px 28px;
+	display: grid;
+	gap: 20px;
+}
+
+.spp-field {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.spp-field label {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--spp-text);
+}
+
+.spp-field input[type="text"],
+.spp-field input[type="number"] {
+	border: 1.5px solid var(--spp-border);
+	border-radius: 7px;
+	padding: 9px 13px;
+	font-size: 14px;
+	color: var(--spp-text);
+	transition: border-color var(--spp-transition), box-shadow var(--spp-transition);
+	width: 100%;
+	box-sizing: border-box;
+	background: #fafafa;
+}
+
+.spp-field input[type="text"]:focus,
+.spp-field input[type="number"]:focus {
+	outline: none;
+	border-color: var(--spp-primary);
+	box-shadow: 0 0 0 3px rgba(26,26,46,.08);
+	background: #fff;
+}
+
+.spp-hint {
+	font-size: 12px;
+	color: var(--spp-muted);
+	line-height: 1.4;
+}
+
+/* ── Cost input ── */
+.spp-cost-input {
+	display: flex;
+	align-items: center;
+	border: 1.5px solid var(--spp-border);
+	border-radius: 7px;
+	overflow: hidden;
+	background: #fafafa;
+	transition: border-color var(--spp-transition), box-shadow var(--spp-transition);
+	max-width: 200px;
+}
+
+.spp-cost-input:focus-within {
+	border-color: var(--spp-primary);
+	box-shadow: 0 0 0 3px rgba(26,26,46,.08);
+	background: #fff;
+}
+
+.spp-currency {
+	padding: 9px 12px;
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--spp-muted);
+	background: var(--spp-bg);
+	border-right: 1.5px solid var(--spp-border);
+	flex-shrink: 0;
+	line-height: 1;
+}
+
+.spp-cost-input input[type="number"] {
+	border: none;
+	border-radius: 0;
+	background: transparent;
+	padding: 9px 12px;
+	box-shadow: none;
+}
+
+.spp-cost-input input[type="number"]:focus {
+	outline: none;
+	box-shadow: none;
+	border: none;
+}
+
+/* ── Actions ── */
+.spp-actions {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* ── Buttons ── */
+.spp-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	padding: 9px 18px;
+	border-radius: 7px;
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+	border: 1.5px solid transparent;
+	transition: all var(--spp-transition);
+	text-decoration: none;
+	line-height: 1;
+}
+
+.spp-btn--primary {
+	background: var(--spp-primary);
+	color: #fff;
+	border-color: var(--spp-primary);
+}
+
+.spp-btn--primary:hover {
+	background: #2d2d4a;
+	border-color: #2d2d4a;
+	color: #fff;
+}
+
+.spp-btn--primary:disabled {
+	opacity: .6;
+	cursor: default;
+}
+
+.spp-btn--ghost {
+	background: transparent;
+	color: var(--spp-muted);
+	border-color: var(--spp-border);
+}
+
+.spp-btn--ghost:hover {
+	border-color: var(--spp-primary);
+	color: var(--spp-primary);
+}
+
+.spp-btn--edit {
+	background: transparent;
+	color: var(--spp-primary);
+	border-color: var(--spp-border);
+	padding: 6px 12px;
+	font-size: 12px;
+}
+
+.spp-btn--edit:hover {
+	background: var(--spp-primary);
+	color: #fff;
+	border-color: var(--spp-primary);
+}
+
+.spp-btn--danger {
+	background: transparent;
+	color: var(--spp-danger);
+	border-color: #fad5d5;
+	padding: 6px 12px;
+	font-size: 12px;
+}
+
+.spp-btn--danger:hover {
+	background: var(--spp-danger);
+	color: #fff;
+	border-color: var(--spp-danger);
+}
+
+/* ── Message ── */
+.spp-msg {
+	padding: 10px 14px;
+	border-radius: 7px;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.spp-msg--success {
+	background: #edfaf4;
+	color: #217a52;
+	border: 1px solid #b0e8cc;
+}
+
+.spp-msg--error {
+	background: #fef1f1;
+	color: #9b2222;
+	border: 1px solid #f5bcbc;
+}
+
+/* ── Table ── */
+.spp-table-wrap {
+	overflow-x: auto;
+	padding: 0 0 4px;
+}
+
+.spp-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 13.5px;
+}
+
+.spp-table thead tr {
+	background: var(--spp-bg);
+	border-bottom: 2px solid var(--spp-border);
+}
+
+.spp-table th {
+	padding: 12px 20px;
+	text-align: left;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: .06em;
+	color: var(--spp-muted);
+	white-space: nowrap;
+}
+
+.spp-table td {
+	padding: 14px 20px;
+	vertical-align: middle;
+	border-bottom: 1px solid var(--spp-border);
+	color: var(--spp-text);
+}
+
+.spp-table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.spp-table tbody tr {
+	transition: background var(--spp-transition);
+}
+
+.spp-table tbody tr:hover {
+	background: #f7f7fb;
+}
+
+.spp-rule-label {
+	font-weight: 600;
+}
+
+.spp-rule-label--empty {
+	color: var(--spp-muted);
+	font-weight: 400;
+}
+
+.spp-product-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.spp-tag {
+	display: inline-block;
+	background: var(--spp-bg);
+	border: 1px solid var(--spp-border);
+	border-radius: 4px;
+	padding: 2px 8px;
+	font-size: 12px;
+	color: var(--spp-text);
+	font-weight: 500;
+}
+
+.spp-tag--missing {
+	background: #fff3f3;
+	border-color: #f5bcbc;
+	color: var(--spp-danger);
+}
+
+.spp-td-actions {
+	display: flex;
+	gap: 8px;
+	flex-wrap: nowrap;
+}
+
+.spp-td-cost strong {
+	font-size: 14px;
+	color: var(--spp-primary);
+}
+
+/* ── Empty State ── */
+.spp-empty {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 52px 24px;
+	color: var(--spp-muted);
+	gap: 14px;
+}
+
+.spp-empty svg {
+	opacity: .35;
+}
+
+.spp-empty p {
+	margin: 0;
+	font-size: 14px;
+}
+
+/* ── Info Card ── */
+.spp-card--info {
+	display: flex;
+	align-items: flex-start;
+	gap: 14px;
+	padding: 18px 22px;
+	background: var(--spp-info-bg);
+	border-color: var(--spp-info-border);
+	box-shadow: none;
+}
+
+.spp-info-icon {
+	flex-shrink: 0;
+	color: var(--spp-accent-hover);
+	margin-top: 1px;
+}
+
+.spp-card--info strong {
+	display: block;
+	font-size: 13px;
+	font-weight: 700;
+	color: var(--spp-primary);
+	margin-bottom: 5px;
+}
+
+.spp-card--info p {
+	margin: 0;
+	font-size: 13px;
+	color: #5a4a2a;
+	line-height: 1.5;
+}
+
+/* ── Select2 overrides ── */
+.spp-wrap .select2-container--default .select2-selection--multiple {
+	border: 1.5px solid var(--spp-border);
+	border-radius: 7px;
+	background: #fafafa;
+	min-height: 42px;
+	padding: 4px 8px;
+	transition: border-color var(--spp-transition), box-shadow var(--spp-transition);
+}
+
+.spp-wrap .select2-container--default.select2-container--focus .select2-selection--multiple {
+	border-color: var(--spp-primary);
+	box-shadow: 0 0 0 3px rgba(26,26,46,.08);
+	background: #fff;
+}
+
+.spp-wrap .select2-container--default .select2-selection--multiple .select2-selection__choice {
+	background: var(--spp-primary);
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	padding: 2px 8px;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.spp-wrap .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+	color: rgba(255,255,255,.7);
+	margin-right: 4px;
+}
+
+.spp-wrap .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+	color: #fff;
+	background: transparent;
+}
+
+.spp-wrap .select2-dropdown {
+	border: 1.5px solid var(--spp-primary);
+	border-radius: 7px;
+	box-shadow: var(--spp-shadow);
+	font-size: 13px;
+}
+
+.spp-wrap .select2-results__option--highlighted {
+	background: var(--spp-primary) !important;
+}
+
+/* ── Row remove animation ── */
+@keyframes spp-fadeOut {
+	from { opacity: 1; transform: translateX(0); }
+	to   { opacity: 0; transform: translateX(-10px); }
+}
+
+.spp-row-removing {
+	animation: spp-fadeOut .25s ease forwards;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+	.spp-body { padding: 0 16px; }
+	.spp-header { padding: 0 16px; }
+	.spp-card-header { padding: 18px 18px 0; }
+	.spp-form { padding: 4px 18px 22px; }
+	.spp-table th,
+	.spp-table td { padding: 10px 14px; }
+}
