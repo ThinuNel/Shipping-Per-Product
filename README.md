@@ -73,6 +73,12 @@ The plugin adds a **Shipping Per Product** submenu under WooCommerce in the Word
 
 ## Changelog
 
+### v1.0.3 — Brand Refresh, Auto-Updates & License
+- **New** Company logo (Hera Studio LK favicon) displayed in the plugin header
+- **New** Redesigned admin UI — black header, white primary text, cyan→purple gradient accent matching the Hera Studio brand
+- **New** GitHub auto-updater — WordPress will notify you and let you update with one click whenever a new release is published on GitHub
+- **New** Proprietary license (LICENSE.txt) — protects source code from unauthorised redistribution or resale
+
 ### v1.0.2 — Checkout & Availability Fixes
 - **Fixed** shipping cost not appearing at checkout — WooCommerce shipping rate cache is now busted immediately after any rule is saved or deleted
 - **Fixed** shipping method sometimes not appearing in the checkout shipping list — `enabled` state now defaults to `yes` correctly

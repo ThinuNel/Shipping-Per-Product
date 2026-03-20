@@ -106,16 +106,20 @@ class SPP_Admin {
 		<div class="spp-wrap">
 			<div class="spp-header">
 				<div class="spp-header-inner">
-					<div class="spp-logo">
-						<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect width="32" height="32" rx="8" fill="#1a1a2e"/>
-							<path d="M8 10h16M8 16h10M8 22h13" stroke="#e8b86d" stroke-width="2.5" stroke-linecap="round"/>
-							<circle cx="24" cy="22" r="3.5" stroke="#e8b86d" stroke-width="2"/>
-						</svg>
-						<span><?php esc_html_e( 'Shipping Per Product', 'shipping-per-product' ); ?></span>
-					</div>
+					<a href="https://www.herastudiolk.com" target="_blank" rel="noopener noreferrer" class="spp-logo">
+						<img
+							src="<?php echo esc_url( SPP_PLUGIN_URL . 'assets/images/hera-logo.png' ); ?>"
+							alt="Hera Studio LK"
+							class="spp-logo-icon"
+						>
+						<div class="spp-logo-text">
+							<span class="spp-logo-name"><?php esc_html_e( 'Shipping Per Product', 'shipping-per-product' ); ?></span>
+							<span class="spp-logo-sub">by Hera Studio LK</span>
+						</div>
+					</a>
 					<a href="https://www.herastudiolk.com" target="_blank" rel="noopener noreferrer" class="spp-badge">
-						Hera Studio LK
+						herastudiolk.com
+						<span class="spp-version">v<?php echo esc_html( SPP_VERSION ); ?></span>
 					</a>
 				</div>
 			</div>

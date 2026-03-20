@@ -1,0 +1,92 @@
+SHIPPING PER PRODUCT — PROPRIETARY SOFTWARE LICENSE
+Copyright (c) 2025 Hera Studio LK (https://www.herastudiolk.com)
+All rights reserved.
+
+================================================================================
+IMPORTANT: READ THIS LICENSE CAREFULLY BEFORE USING, COPYING, OR DISTRIBUTING
+THIS SOFTWARE. BY INSTALLING OR USING THIS PLUGIN YOU AGREE TO THESE TERMS.
+================================================================================
+
+1. DEFINITIONS
+   "Software"  means the Shipping Per Product WordPress plugin, including all
+               source code, compiled code, documentation, assets, and any
+               updates or modifications thereof.
+   "Licensor"  means Hera Studio LK, the copyright holder.
+   "You"       means the individual or entity that has obtained the Software
+               from the Licensor or an authorised distributor.
+
+2. GRANT OF LICENSE
+   Subject to the terms of this License, the Licensor grants You a limited,
+   non-exclusive, non-transferable, non-sublicensable license to:
+
+   (a) Install and use the Software on WordPress websites that You own or
+       directly manage on behalf of clients ("Permitted Sites").
+   (b) View and read the source code for the sole purpose of understanding
+       the operation of the Software.
+   (c) Make reasonable modifications to the Software solely for use on your
+       own Permitted Sites, provided that such modifications are not
+       redistributed.
+
+3. RESTRICTIONS
+   You may NOT, without prior written consent from the Licensor:
+
+   (a) Redistribute, resell, sublicense, rent, lease, or lend the Software
+       or any portion thereof, whether modified or unmodified.
+   (b) Include the Software, or any derivative work based upon it, in any
+       product, plugin, theme, or service that is offered for sale, rent,
+       subscription, or free public download.
+   (c) Remove, alter, or obscure any copyright notice, trademark, author
+       attribution, or other proprietary notices in the Software.
+   (d) Use the Licensor's name, logo, trademarks, or branding in any way
+       that suggests endorsement or affiliation without prior written consent.
+   (e) Reverse-engineer, decompile, or disassemble any compiled portion of
+       the Software beyond what is already provided in source form.
+   (f) Use the Software for any unlawful purpose or in violation of any
+       applicable laws or regulations.
+
+4. OWNERSHIP
+   The Software is licensed, not sold. The Licensor retains all right, title,
+   and interest in and to the Software, including all intellectual property
+   rights. This License does not transfer any ownership rights to You.
+
+5. UPDATES
+   The Licensor may provide updates, patches, or new versions of the Software
+   at its sole discretion. This License applies to all such updates unless a
+   separate license is provided with the update.
+
+6. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. THE LICENSOR DOES
+   NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE OR UNINTERRUPTED.
+
+7. LIMITATION OF LIABILITY
+   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE
+   LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
+   OR EXEMPLARY DAMAGES (INCLUDING LOST PROFITS, DATA LOSS, OR BUSINESS
+   INTERRUPTION) ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO
+   USE THE SOFTWARE, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY
+   OF SUCH DAMAGES. THE LICENSOR'S TOTAL LIABILITY SHALL NOT EXCEED THE
+   AMOUNT PAID BY YOU FOR THE SOFTWARE IN THE TWELVE MONTHS PRECEDING THE
+   CLAIM.
+
+8. TERMINATION
+   This License is effective until terminated. It will terminate automatically
+   if You fail to comply with any of its terms. Upon termination You must
+   destroy all copies of the Software in your possession.
+
+9. GOVERNING LAW
+   This License shall be governed by and construed in accordance with the laws
+   of Sri Lanka, without regard to its conflict-of-law provisions. Any dispute
+   arising from this License shall be subject to the exclusive jurisdiction of
+   the courts of Sri Lanka.
+
+10. ENTIRE AGREEMENT
+    This License constitutes the entire agreement between You and the Licensor
+    with respect to the Software and supersedes all prior agreements,
+    representations, and understandings.
+
+================================================================================
+For licensing inquiries, custom agreements, or permissions beyond the scope of
+this license, please contact: https://www.herastudiolk.com
+================================================================================

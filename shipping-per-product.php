@@ -3,10 +3,10 @@
  * Plugin Name: Shipping Per Product
  * Plugin URI:  https://www.herastudiolk.com
  * Description: Easily add custom shipping costs per product in WooCommerce using the "Hera Shipping" class.
- * Version:     1.0.2
+ * Version:     1.0.3
  * Author:      Hera Studio LK
  * Author URI:  https://www.herastudiolk.com
- * License:     GPL-2.0+
+ * License:     Proprietary
  * Text Domain: shipping-per-product
  * Domain Path: /languages
  * Requires at least: 5.8
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SPP_VERSION',     '1.0.2' );
+define( 'SPP_VERSION',     '1.0.3' );
 define( 'SPP_PLUGIN_DIR',  plugin_dir_path( __FILE__ ) );
 define( 'SPP_PLUGIN_URL',  plugin_dir_url( __FILE__ ) );
 define( 'SPP_PLUGIN_FILE', __FILE__ );
@@ -36,6 +36,7 @@ function spp_load_classes() {
 	require_once SPP_PLUGIN_DIR . 'includes/class-spp-shipping-method.php';
 	require_once SPP_PLUGIN_DIR . 'includes/class-spp-admin.php';
 	require_once SPP_PLUGIN_DIR . 'includes/class-spp-calculator.php';
+	require_once SPP_PLUGIN_DIR . 'includes/class-spp-updater.php';
 }
 
 /**
@@ -70,6 +71,7 @@ function spp_init() {
 
 	SPP_Shipping_Class::init();
 	SPP_Admin::init();
+	SPP_Updater::init();
 
 	// Register custom shipping method with WooCommerce.
 	add_filter( 'woocommerce_shipping_methods', 'spp_register_shipping_method' );
