@@ -73,6 +73,13 @@ The plugin adds a **Shipping Per Product** submenu under WooCommerce in the Word
 
 ## Changelog
 
+### v1.1.0 — Unified Shipping Engine (Weight + Per-Product)
+- **New** Built-in weight-based shipping with tiered cost rules (add, duplicate, delete)
+- **New** Unified calculation engine: weight tiers apply to all products; per-product rules override the weight cost for specific products only — both handled by one WooCommerce shipping method, eliminating zone conflicts with other plugins
+- **New** Tabbed admin UI — "Per-Product Rules" tab and "Weight-Based Rules" tab
+- **New** Weight rules support unlimited upper bound (max = 0) for catch-all tiers
+- **Fixed** Conflict warning from Flexible Shipping / Weight Based Shipping plugins — all shipping is now handled by a single Hera Shipping method in a single zone
+
 ### v1.0.3 — Brand Refresh, Auto-Updates & License
 - **New** Company logo (Hera Studio LK favicon) displayed in the plugin header
 - **New** Redesigned admin UI — black header, white primary text, cyan→purple gradient accent matching the Hera Studio brand
@@ -105,7 +112,8 @@ The plugin adds a **Shipping Per Product** submenu under WooCommerce in the Word
 
 ## License
 
-[GPL-2.0+](https://www.gnu.org/licenses/gpl-2.0.html)
+This plugin is **proprietary software** owned by [Hera Studio LK](https://www.herastudiolk.com).  
+See [LICENSE.txt](LICENSE.txt) for the full terms. Unauthorised redistribution or resale is prohibited.
 
 ---
 

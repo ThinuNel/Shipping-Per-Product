@@ -655,3 +655,230 @@
 	.spp-table td    { padding: 10px 12px; }
 	.spp-logo-sub    { display: none; }
 }
+
+/* =====================================================================
+   Weight-Based Rules — Tab 2  (appended for v1.1.0)
+   ===================================================================== */
+
+/* ── Tab navigation ─────────────────────────────────────────────────── */
+.spp-tab-nav-wrap {
+	background: var(--spp-black);
+	padding: 0 32px;
+	margin-left: -20px;
+	border-bottom: 1px solid rgba(255,255,255,.10);
+}
+
+.spp-tab-nav {
+	max-width: 960px;
+	display: flex;
+	gap: 0;
+}
+
+.spp-tab {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	padding: 13px 20px;
+	font-size: 13px;
+	font-weight: 600;
+	color: rgba(255,255,255,.50);
+	text-decoration: none;
+	border-bottom: 3px solid transparent;
+	transition: color var(--spp-transition), border-color var(--spp-transition);
+	white-space: nowrap;
+	letter-spacing: -.005em;
+}
+
+.spp-tab:hover {
+	color: rgba(255,255,255,.80);
+}
+
+.spp-tab--active {
+	color: var(--spp-white);
+	border-bottom-color: var(--spp-c1); /* cyan accent */
+}
+
+.spp-tab-count {
+	background: rgba(255,255,255,.12);
+	color: rgba(255,255,255,.65);
+	font-size: 10.5px;
+	font-weight: 700;
+	padding: 1px 7px;
+	border-radius: 20px;
+	letter-spacing: .02em;
+	min-width: 18px;
+	text-align: center;
+}
+
+.spp-tab--active .spp-tab-count {
+	background: rgba(34,211,238,.22);
+	color: var(--spp-c1);
+}
+
+/* ── Two-column form row ─────────────────────────────────────────────── */
+.spp-row-2col {
+	display: grid;
+	grid-template-columns: 1fr 220px;
+	gap: 16px;
+	align-items: start;
+}
+
+@media (max-width: 600px) {
+	.spp-row-2col { grid-template-columns: 1fr; }
+}
+
+/* ── Weight editor container ─────────────────────────────────────────── */
+.spp-weight-editor {
+	padding: 8px 26px 0;
+}
+
+/* Column headers */
+.spp-weight-header {
+	display: grid;
+	grid-template-columns: 1fr 130px 130px 160px 90px;
+	gap: 12px;
+	padding: 8px 10px;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: .07em;
+	color: var(--spp-muted);
+}
+
+/* Single rule row */
+.spp-weight-row {
+	display: grid;
+	grid-template-columns: 1fr 130px 130px 160px 90px;
+	gap: 12px;
+	align-items: center;
+	padding: 8px 10px;
+	border-radius: var(--spp-radius-sm);
+	transition: background var(--spp-transition);
+}
+
+.spp-weight-row:hover {
+	background: var(--spp-bg);
+}
+
+/* Inputs inside weight rows */
+.spp-weight-row input[type="text"],
+.spp-weight-row input[type="number"] {
+	width: 100%;
+	border: 1.5px solid var(--spp-border);
+	border-radius: var(--spp-radius-sm);
+	padding: 8px 10px;
+	font-size: 13px;
+	color: var(--spp-text);
+	background: #fafbfc;
+	box-sizing: border-box;
+	transition: border-color var(--spp-transition), box-shadow var(--spp-transition);
+	font-family: inherit;
+}
+
+.spp-weight-row input:focus {
+	outline: none;
+	border-color: var(--spp-accent);
+	box-shadow: 0 0 0 3px var(--spp-accent-glow);
+	background: #fff;
+}
+
+/* Cost cell reuses .spp-cost-input */
+.spp-wr-cost-wrap {
+	max-width: 100%;
+}
+
+.spp-wr-cost-wrap .spp-cost-input {
+	max-width: 100%;
+}
+
+/* Row action buttons (icon-only) */
+.spp-wr-actions {
+	display: flex;
+	gap: 6px;
+	justify-content: flex-end;
+}
+
+.spp-btn--icon {
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	justify-content: center;
+	border-radius: var(--spp-radius-sm);
+	color: var(--spp-muted);
+	border-color: var(--spp-border);
+	background: transparent;
+	flex-shrink: 0;
+}
+
+.spp-btn--icon:hover {
+	color: var(--spp-accent);
+	border-color: var(--spp-accent);
+	background: var(--spp-info-bg);
+}
+
+.spp-btn--icon-danger:hover {
+	color: var(--spp-danger);
+	border-color: #fecaca;
+	background: #fef2f2;
+}
+
+/* Footer: Add row button */
+.spp-weight-footer {
+	padding: 12px 10px 20px;
+	border-top: 1px dashed var(--spp-border);
+	margin-top: 6px;
+}
+
+.spp-btn--sm {
+	padding: 7px 14px;
+	font-size: 12.5px;
+}
+
+/* Weight rules save + msg area */
+.spp-weight-actions {
+	padding: 0 26px 26px;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	flex-wrap: wrap;
+}
+
+/* Divider between header and rows */
+.spp-weight-header + #spp-weight-rows {
+	border-top: 1px solid var(--spp-border);
+	padding-top: 4px;
+}
+
+/* Empty weight rows state */
+#spp-weight-rows:empty::after {
+	content: 'No weight rules yet. Click "Add Rule" to get started.';
+	display: block;
+	padding: 32px 10px;
+	text-align: center;
+	color: var(--spp-muted);
+	font-size: 13.5px;
+}
+
+/* Responsive: stack weight columns on small screens */
+@media (max-width: 700px) {
+	.spp-weight-header {
+		display: none;
+	}
+
+	.spp-weight-row {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto auto;
+		gap: 8px;
+		border: 1px solid var(--spp-border);
+		border-radius: var(--spp-radius);
+		padding: 12px;
+		margin-bottom: 8px;
+		background: var(--spp-surface);
+	}
+
+	.spp-wr-cost-wrap { grid-column: 1 / -1; }
+	.spp-wr-actions   { grid-column: 1 / -1; justify-content: flex-start; }
+
+	.spp-tab-nav-wrap { padding: 0 14px; }
+	.spp-tab          { padding: 12px 14px; font-size: 12px; }
+}

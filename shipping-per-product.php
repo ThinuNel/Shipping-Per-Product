@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Shipping Per Product
  * Plugin URI:  https://www.herastudiolk.com
- * Description: Easily add custom shipping costs per product in WooCommerce using the "Hera Shipping" class.
- * Version:     1.0.3
+ * Description: Unified shipping for WooCommerce — weight-based tiers for all products with per-product price overrides for selected items. One method, zero zone conflicts.
+ * Version:     1.1.0
  * Author:      Hera Studio LK
  * Author URI:  https://www.herastudiolk.com
  * License:     Proprietary
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SPP_VERSION',     '1.0.3' );
+define( 'SPP_VERSION',     '1.1.0' );
 define( 'SPP_PLUGIN_DIR',  plugin_dir_path( __FILE__ ) );
 define( 'SPP_PLUGIN_URL',  plugin_dir_url( __FILE__ ) );
 define( 'SPP_PLUGIN_FILE', __FILE__ );
@@ -133,6 +133,19 @@ function spp_activate() {
 
 	require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 	dbDelta( $sql );
+
+	// 1b. Create weight rules table.
+	$weight_table = $wpdb->prefix . 'spp_weight_rules';
+	$sql_weight   = "CREATE TABLE IF NOT EXISTS {$weight_table} (
+		id          BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+		min_weight  DECIMAL(10,3)       NOT NULL DEFAULT 0.000,
+		max_weight  DECIMAL(10,3)       NOT NULL DEFAULT 0.000,
+		cost        DECIMAL(10,2)       NOT NULL DEFAULT 0.00,
+		label       VARCHAR(255)        NOT NULL DEFAULT '',
+		sort_order  INT                 NOT NULL DEFAULT 0,
+		PRIMARY KEY (id)
+	) {$charset};";
+	dbDelta( $sql_weight );
 
 	// 2. Create the "Hera Shipping" shipping class (term) if absent.
 	// The product_shipping_class taxonomy is registered by WooCommerce at
